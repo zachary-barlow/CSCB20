@@ -11,17 +11,20 @@ body {
   background: #75c191;
   color:#c1e7e3;
   margin: 10%;
-  margin-top: -21px;;
+  margin-top: -10px;
+  position: fixed;
 }
 .header h1 {
   text-align: center;
   display: block;
+  margin-top: 10px;
 }
 .header .links li{
   display: inline-block;
   padding: 10px;
   margin-left: 25px;
   position: relative;
+  margin-top: -60px;
 }
 .header .links .dropdown-content {
   display: none;
