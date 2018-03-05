@@ -1,0 +1,21 @@
+- As a student I want to be able to see all the lecture materials
+in a seperate section outlined by Day and Lectur #
+
+- I want to be able to see a calender of all lectures, quizes, office
+hours and exams
+
+- As a student I want to be able to look at my grades for the course
+
+- As a student I want to be able to look at the course discussion (via link)
+from the website
+
+- As a student, if I cannot access/do not check email regurlarly, see announcements
+from professor on a specific page
+
+- On Home Page, have an outline of course, detailing every section and/or
+short form version of each page
+
+- I want to have access to Assignments and lab details seperately
+
+- I want to be to see all solutions to quiz and assignments
+
