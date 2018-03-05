@@ -21,4 +21,4 @@ short form version of each page
 
 - As a student user, the student can see the Syllabus, Lecture Slides, Assignments, Labs, Problem Sets, Quiz Solutions, and Anonymous Feedback from a drop down menu when hovering over Course Materials, and then can access any by clicking on it. 
 
-- A student user should be able to go back to the home page, by clicking Home Page.
+- A student user should be able to go back to the home page, by clicking Home Page, from any page.
