@@ -48,3 +48,13 @@ body {
   background-color: #f02f53;
   color: white;
 }
+.footer { 
+  position:fixed;
+  width:80%;
+  display: block;
+  padding-top:25px;
+  padding-bottom:25px;
+  background-color: #75c191;
+  color:#c1e7e3;
+  bottom: 0;
+}
