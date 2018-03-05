@@ -6,6 +6,7 @@ body {
   width: auto;
   font-family: Verdana, Geneva, sans-serif;
 }
+/* HEADER */
 .header {
   width: 80%;
   height: 100px;
@@ -25,6 +26,7 @@ body {
   padding: 10px;
   margin-left: 25px;
   position: relative;
+  border-radius: 4px;
 }
 .header .links .dropdown-content {
   display: none;
@@ -34,6 +36,7 @@ body {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   z-index: 1;
+  margin-top: 10px;
 }
 .header .links .dropdown-content li{
   width: 100%;
@@ -48,7 +51,9 @@ body {
   background-color: #f02f53;
   color: white;
 }
-.footer { 
+
+/* FOOTER */
+.footer {
   position:fixed;
   width:80%;
   display: block;
