@@ -1,6 +1,6 @@
 a {
   text-decoration: none;
-  color: #d9fbf0;
+  color:#c1e7e3;
 }
 body {
   width: auto;
@@ -13,8 +13,10 @@ body {
   background: #75c191;
   color:#c1e7e3;
   margin: 10%;
-  margin-top: -10px;
+  margin-top: 0px;
   position: fixed;
+  margin-bottom: 50px;
+  top: 0;
 }
 .header h1 {
   text-align: center;
@@ -62,4 +64,11 @@ body {
   background-color: #75c191;
   color:#c1e7e3;
   bottom: 0;
+  margin-left: 10%;
+}
+
+/* MAIN */
+.main-sec {
+  margin-top: 0px;
+  margin-left: 45%;
 }
