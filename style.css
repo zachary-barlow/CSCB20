@@ -60,7 +60,7 @@ body {
   cursor: pointer;
 }
 .header li:hover{
-  background-color: #FFFF6E;
+  background-color: #E0DDDD;
   color: white;
 }
 
