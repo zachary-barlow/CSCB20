@@ -16,6 +16,8 @@ body {
  }
  p{
    font-size: 12px;
+   padding-left: 5%;
+   padding-right: 5%;
  }
 /* HEADER */
 .header {
@@ -74,4 +76,23 @@ body {
   margin-left: 10%;
   overflow:hidden;
   color: #62A6CB
+}
+
+/* MAIN */
+.main-sec {
+  margin-top: 110px;
+  margin: 10%;
+}
+.main-sec h1 {
+  text-align: center;
+}
+.main-sec hr {
+  width: 100%;
+}
+.sub-sec {
+  border: 0.2px solid black;
+  box-shadow: 2px 2px grey;
+  background: #ffffff;
+  margin: 2%;
+  border-radius: 5px 5px;
 }
