@@ -9,7 +9,7 @@ a {
 body {
   width: auto;
   font-family: Verdana, Geneva, sans-serif;
-  background: #E6E6E6;
+  background: #FFFFFF;
 }
  hr {
    width: 50%;
@@ -90,9 +90,12 @@ body {
   width: 100%;
 }
 .sub-sec {
-  border: 0.2px solid black;
-  box-shadow: 2px 2px grey;
-  background: #ffffff;
+  border: 0.2px solid #CACACA;
+  box-shadow: 2px 2px #DDDBDB;
+  background: #FFF5F5;
   margin: 2%;
-  border-radius: 5px 5px;
+}
+.sub-sec:hover {
+  border: 0.2px solid #A8CAEB;
+  box-shadow: 5px 5px #DDDBDB;
 }
