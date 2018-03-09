@@ -20,6 +20,9 @@ body {
    padding-left: 5%;
    padding-right: 5%;
  }
+ small {
+   color: #FFFFFF;
+ }
 /* HEADER */
 .header {
   width: 100%;
@@ -92,6 +95,9 @@ body {
 }
 .main-sec hr {
   width: 100%;
+}
+.main-sec a{
+  color: #3E464A;
 }
 .sub-sec {
   border: 0.2px solid #CACACA;
