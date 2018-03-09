@@ -2,21 +2,11 @@
   padding-left: 10px;
 }
 
-.sub-sec li a {
-  display: inline-block;
-  padding: 10px;
-  margin-left: 10px;
-  position: relative;
-  border-radius: 4px;
-  color:#3E464A;
+.main-sec a:hover {
+  color: #366CA0;
+  text-shadow: 1px 1px #A8CAEB;
 }
-
-.sub-sec li a:hover {
-  display: inline-block;
-  padding: 10px;
-  margin-left: 10px;
-  position: relative;
-  border-radius: 4px;
-  background-color: rgba(98, 166, 203, 0.5);
-  color:#3E464A;
+.main-sec li {
+  font-size: 12px;
+  padding: 3px;
 }

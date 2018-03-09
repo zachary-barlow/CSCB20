@@ -1,34 +1,12 @@
-.main-sec{
-  margin-top: 110px;
-  margin: 10%;
-  text-align: left;
-  color: #3E464A;
-  padding-top: 15px;
-}
-
-.main-sec h2 {
-  text-align: left;
+.sub-sec h2 {
   padding-left: 10px;
 }
 
-.main-sec a {
-  text-decoration: none;
-  color:#3E464A;
+.main-sec a:hover {
+  color: #366CA0;
+  text-shadow: 1px 1px #A8CAEB;
 }
-
 .main-sec li {
-  display: inline-block;
-  padding: 10px;
-  margin-left: 10px;
-  position: relative;
-  border-radius: 4px;
-}
-
-.main-sec li:hover{
-  display: inline-block;
-  padding: 10px;
-  margin-left: 10px;
-  position: relative;
-  border-radius: 4px;
-  background-color: rgba(98, 166, 203, 0.5);
+  font-size: 12px;
+  padding: 3px;
 }
