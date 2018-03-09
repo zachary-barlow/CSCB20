@@ -68,7 +68,9 @@ body {
   background-color: #62A6CB;
   color: white;
 }
-
+.header ul {
+  margin-left: 5%;
+}
 /* FOOTER */
 .footer {
   background-color: #3E464A;
