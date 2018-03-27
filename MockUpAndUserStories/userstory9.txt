@@ -1,0 +1,4 @@
+- As a student user, the student can see the Syllabus, 
+Lecture Slides, Assignments, Labs, Problem Sets, 
+Quiz Solutions, and Anonymous Feedback from a drop down menu when hovering over 
+Course Materials, and then can access any by clicking on it. 

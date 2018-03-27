@@ -1,0 +1,2 @@
+- As a student, if I cannot access/do not check email regurlarly, see announcements
+from professor on a specific page
