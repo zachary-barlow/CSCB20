@@ -38,28 +38,37 @@
 
    <div class="main-sec">
      <div class="sub-sec">
-       <div>Name:<?php echo $firstname $lastname;?></div>
+       <div>Name:<?php echo $login_session;?></div>
      </div>
-     <div class="sub-sec" id="grades">
+     <div class="sub-sec">
       <!-- grades here -->
       <?php
-        $gq = "SELECT * from grades where id=$result";
-        $cq = "SHOW COLUMNS FROM grades"
-        $gr = mysqli_query($db, $gq);
-        $r = mysqli_fetch_array($gr, MYSQLI_ASSOC);
-        $result = mysqli_query($db,$cq);
+        //$cq = "SELECT column_name FROM information_schema.columns WHERE table_name='grades'";
+
+        //$result = mysqli_query($db,$cq);
         // get column names (all projects/quizzes/test grades)
-        $columns = array();
+      /*  $columns = array();
         while($row = mysqli_fetch_array($result)){
-            $columns[] += $row["Field"];
+            echo '<p>' . $row["Field"] . '</p>';
+        }*/
+        /*$sql = "SHOW COLUMNS FROM grades";
+        $result = mysqli_query($db,$sql);
+        while($row = mysqli_fetch_array($result)){
+            echo '<p>' . $row['Field'].":</p>";
+        }*/
+
+        $sql_id = "SELECT id FROM users WHERE username = '$login_session' ";
+        $id_result = mysqli_query($db,$sql_id);
+        $id = mysqli_fetch_array($id_result,MYSQLI_ASSOC);
+
+        $sql_marks = "SELECT * FROM grades WHERE grades.id = $id[id]";
+        $marks = mysqli_query($db,$sql_marks);
+        $marks_row = mysqli_fetch_array($marks,MYSQLI_ASSOC);
+        echo '<ul>';
+        foreach ($marks_row as $key ) {
+          echo '<li style="display: inline; padding: 5px;">' . $key . '</li>';
         }
-        for($i = 0; $i <$numrows; $i++) {
-          //select statement
-          $sql = "SELECT $columns[i] FROM grades WHERE id=$result";
-          $query = mysqli_query($db, $gq);
-          $res = mysqli_fetch_array($gr, MYSQLI_ASSOC);
-          echo '<h5>' . $columns[i] . ':   ' . $res . '</h5><br>';
-        }
+        echo '</ul><br>';
       ?>
      </div>
    </div>
