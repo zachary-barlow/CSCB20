@@ -5,7 +5,7 @@
 <html>
 <head>
   <link type="text/css" href="style.css" rel="stylesheet">
-  <link type="text/css" href="index.css" rel="stylesheet">
+  <link type="text/css" href="LectureSlides.css" rel="stylesheet">
 </head>
 <body>
   <?php
@@ -17,12 +17,12 @@
       echo '<div class="header">
         <h1>CSCB20</h1>
         <ul class="links">
-          <li><a href="#">Home Page</a></li>
+          <li><a href="index.php">Home Page</a></li>
           <li><a href="announcements.php">Announcements</a></li>
           <li class="dropdown"><a href="#">Course Materials</a>
             <ul class="dropdown-content">
               <li><a href="./pdfs/Syllabus.pdf">Syllabus</a></li>
-              <li><a href="LectureSlides.php">Lecture Slides</a></li>
+              <li><a href="#">Lecture Slides</a></li>
               <li><a href="Assignments.php">Assignments</a></li>
               <li><a href="Labs.php">Labs</a></li>
               <li><a href="ProblemSets.php">Problem Sets</a></li>
@@ -45,12 +45,12 @@
       echo '<div class="header">
         <h1>CSCB20</h1>
         <ul class="links">
-          <li><a href="#">Home Page</a></li>
+          <li><a href="index.php">Home Page</a></li>
           <li><a href="announcements.php">Announcements</a></li>
           <li class="dropdown"><a href="#">Course Materials</a>
             <ul class="dropdown-content">
               <li><a href="./pdfs/Syllabus.pdf">Syllabus</a></li>
-              <li><a href="LectureSlides.php">Lecture Slides</a></li>
+              <li><a href="#">Lecture Slides</a></li>
               <li><a href="Assignments.php">Assignments</a></li>
               <li><a href="Labs.php">Labs</a></li>
               <li><a href="ProblemSets.php">Problem Sets</a></li>
@@ -68,12 +68,12 @@
       echo '<div class="header">
         <h1>CSCB20</h1>
         <ul class="links">
-          <li><a href="#">Home Page</a></li>
+          <li><a href="index.php">Home Page</a></li>
           <li><a href="announcements.php">Announcements</a></li>
           <li class="dropdown"><a href="#">Course Materials</a>
             <ul class="dropdown-content">
               <li><a href="./pdfs/Syllabus.pdf">Syllabus</a></li>
-              <li><a href="LectureSlides.php">Lecture Slides</a></li>
+              <li><a href="#">Lecture Slides</a></li>
               <li><a href="Assignments.php">Assignments</a></li>
               <li><a href="Labs.php">Labs</a></li>
               <li><a href="ProblemSets.php">Problem Sets</a></li>
@@ -90,28 +90,62 @@
     }
 
    ?>
-
   <div class="main-sec">
     <div class="sub-sec">
-      <h1>CSCB20 &#8211; Introduction to Databases and Web Applications</h1>
-      <h5 style="color: grey; margin-left: 5%; margin-bottom: -8px;">Course Overview</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h1>Lecture Slides</h1>
     </div>
     <div class="sub-sec">
-      <h3>Instructor Information</h3>
-      <ul>
-        <li>Instructor: A. Attarwala</li>
-        <li>Lecture: Mondays 9am - 11am in SW319</li>
-        <li>Email: abbas.attarwala@utoronto.ca</li>
-      </ul>
+      <div class="indented">
+        <h3>Lecture 1 : (DATE)</h3>
+        <p>Slides : <a href="./pdfs/B20Week1.pdf">B20Week1.pdf</a><br><a href="./pdfs/B20Week2.pdf" style="margin-left: 50px;">B20Week2.pdf</a></p>
+        <hr>
+        <h3>Readings</h3>
+        <ol>
+          <li>What is a database? Very high level introduction to a Database : http://web.calstatela.edu/library/whatisadatabase.html</li>
+          <li>A basic tutorial on SQL : https://www.w3resource.com/sql/tutorials.php</li>
+          <li>(Basic introduction to SQL) : https://www.w3schools.com/sql/</li>
+          <li>(DIfference between a Primary and a Foreign Key) : https://www.essentialsql.com/what-is-the-difference-between-a-primary-key-and-a-foreign-key/</li>
+        </ol>
+      </div>
     </div>
-    <div class="calender, sub-sec">
-      <h1>Course Calender</h1>
-      <hr>
-      <iframe src="https://calendar.google.com/calendar/embed?title=CSCB20&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=ztbarlow66%40gmail.com&amp;color=%2329527A&amp;ctz=Europe%2FLondon" style="border-width:0; margin-left:0.5%" width="99%" height="600px" frameborder="0" scrolling="no"></iframe>
+    <div class="sub-sec">
+      <div class="indented">
+        <h3>Lecture 2 : (DATE)</h3>
+        <p>Slides : <a href="./pdfs/cscb20Week2.pdf">cscb20Week2.pdf</a></p>
+        <hr>
+        <h3>Readings</h3>
+        <ol>
+          <li>Examples on joins and other operations using relational algebra : http://www.cs.toronto.edu/~faye/343/f07/lectures/wk3/03_RAlgebra.pdf</li>
+          <li>http://people.cs.pitt.edu/~chang/156/05algebra.html</li>
+          <li>Very good examples on the different kinds of join and other operations on relatinal algebra : https://courses.cs.washington.edu/courses/cse444/10sp/lectures/lecture16.pdf</li>
+        </ol>
+      </div>
+    </div>
+    <div class="sub-sec">
+      <div class="indented">
+        <h3>Lecture 3 : (DATE)</h3>
+        <p>Slides : <a href="./pdfs/cscb20Week3and4.pdf">cscb20Week3and4.pdf</a><br><a href="./pdfs/cscb20Week3.pdf" style="margin-left: 50px;">cscb20Week3.pdf</a></p>
+        <hr>
+        <h3>Readings</h3>
+        <ol>
+          <li>http://www.cs.cornell.edu/projects/btr/bioinformaticsschool/slides/gehrke.pdf</li>
+          <li>https://www.tutorialspoint.com/dbms/relational_algebra.htm</li>
+        </ol>
+      </div>
+    </div>
+    <div class="sub-sec">
+      <div class="indented">
+        <h3>Lecture 4 : (DATE)</h3>
+        <hr>
+        <h3>Readings</h3>
+        <ol>
+          <li>https://stackoverflow.com/questions/8696383/difference-between-natural-join-and-inner-join</li>
+          <li>https://www.w3resource.com/sql/joins/natural-join.php</li>
+          <li>https://stackoverflow.com/questions/1018822/inner-join-on-vs-where-clause</li>
+        </ol>
+      </div>
     </div>
   </div>
-
   <div class="footer">
     <div style="text-align:left; padding-left:10px;"><a href="http://www.utsc.utoronto.ca/cms/computer-science-1"><small>Faculty of Computer Science</small></a></div>
     <div style="text-align:left; padding-left:10px; padding-top:10px;"><small>Site Design by...</small></div>

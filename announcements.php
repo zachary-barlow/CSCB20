@@ -5,7 +5,7 @@
 <html>
 <head>
   <link type="text/css" href="style.css" rel="stylesheet">
-  <link type="text/css" href="index.css" rel="stylesheet">
+  <link type="text/css" href="announcement.css" rel="stylesheet">
 </head>
 <body>
   <?php
@@ -17,8 +17,8 @@
       echo '<div class="header">
         <h1>CSCB20</h1>
         <ul class="links">
-          <li><a href="#">Home Page</a></li>
-          <li><a href="announcements.php">Announcements</a></li>
+          <li><a href="index.php">Home Page</a></li>
+          <li><a href="#">Announcements</a></li>
           <li class="dropdown"><a href="#">Course Materials</a>
             <ul class="dropdown-content">
               <li><a href="./pdfs/Syllabus.pdf">Syllabus</a></li>
@@ -45,8 +45,8 @@
       echo '<div class="header">
         <h1>CSCB20</h1>
         <ul class="links">
-          <li><a href="#">Home Page</a></li>
-          <li><a href="announcements.php">Announcements</a></li>
+          <li><a href="index.php">Home Page</a></li>
+          <li><a href="#">Announcements</a></li>
           <li class="dropdown"><a href="#">Course Materials</a>
             <ul class="dropdown-content">
               <li><a href="./pdfs/Syllabus.pdf">Syllabus</a></li>
@@ -68,8 +68,8 @@
       echo '<div class="header">
         <h1>CSCB20</h1>
         <ul class="links">
-          <li><a href="#">Home Page</a></li>
-          <li><a href="announcements.php">Announcements</a></li>
+          <li><a href="index.php">Home Page</a></li>
+          <li><a href="#">Announcements</a></li>
           <li class="dropdown"><a href="#">Course Materials</a>
             <ul class="dropdown-content">
               <li><a href="./pdfs/Syllabus.pdf">Syllabus</a></li>
@@ -90,28 +90,41 @@
     }
 
    ?>
-
   <div class="main-sec">
-    <div class="sub-sec">
-      <h1>CSCB20 &#8211; Introduction to Databases and Web Applications</h1>
-      <h5 style="color: grey; margin-left: 5%; margin-bottom: -8px;">Course Overview</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="sub-sec"><h1>Announcements</h1></div>
+    <div class="announcement, sub-sec">
+      <div class="indented">
+        <h3>Announcement 1</h2>
+        <small>Posted on: *insert date*</small><br>
+        <small>Posted by: *PERSON*</small>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed perferendis saepe, adipisci quae sint aperiam esse, placeat veritatis rem, dolores quibusdam eum autem deserunt! Nam ipsa ex, neque quae similique.</p>
+      </div>
     </div>
-    <div class="sub-sec">
-      <h3>Instructor Information</h3>
-      <ul>
-        <li>Instructor: A. Attarwala</li>
-        <li>Lecture: Mondays 9am - 11am in SW319</li>
-        <li>Email: abbas.attarwala@utoronto.ca</li>
-      </ul>
+    <div class="announcement, sub-sec">
+      <div class="indented">
+        <h3>Announcement 2</h2>
+        <small>Posted on: *insert date*</small><br>
+        <small>Posted by: *PERSON*</small>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed perferendis saepe, adipisci quae sint aperiam esse, placeat veritatis rem, dolores quibusdam eum autem deserunt! Nam ipsa ex, neque quae similique.</p>
+      </div>
     </div>
-    <div class="calender, sub-sec">
-      <h1>Course Calender</h1>
-      <hr>
-      <iframe src="https://calendar.google.com/calendar/embed?title=CSCB20&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=ztbarlow66%40gmail.com&amp;color=%2329527A&amp;ctz=Europe%2FLondon" style="border-width:0; margin-left:0.5%" width="99%" height="600px" frameborder="0" scrolling="no"></iframe>
+    <div class="announcement, sub-sec">
+      <div class="indented">
+        <h3>Announcement 3</h2>
+        <small>Posted on: *insert date*</small><br>
+        <small>Posted by: *PERSON*</small>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed perferendis saepe, adipisci quae sint aperiam esse, placeat veritatis rem, dolores quibusdam eum autem deserunt! Nam ipsa ex, neque quae similique.</p>
+      </div>
+    </div>
+    <div class="announcement, sub-sec">
+      <div class="indented">
+        <h3>Announcement 4</h2>
+        <small>Posted on: *insert date*</small><br>
+        <small>Posted by: *PERSON*</small>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed perferendis saepe, adipisci quae sint aperiam esse, placeat veritatis rem, dolores quibusdam eum autem deserunt! Nam ipsa ex, neque quae similique.</p>
+      </div>
     </div>
   </div>
-
   <div class="footer">
     <div style="text-align:left; padding-left:10px;"><a href="http://www.utsc.utoronto.ca/cms/computer-science-1"><small>Faculty of Computer Science</small></a></div>
     <div style="text-align:left; padding-left:10px; padding-top:10px;"><small>Site Design by...</small></div>

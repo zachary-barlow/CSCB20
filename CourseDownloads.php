@@ -5,7 +5,7 @@
 <html>
 <head>
   <link type="text/css" href="style.css" rel="stylesheet">
-  <link type="text/css" href="index.css" rel="stylesheet">
+  <link type="text/css" href="CourseDownloads.css" rel="stylesheet">
 </head>
 <body>
   <?php
@@ -17,7 +17,7 @@
       echo '<div class="header">
         <h1>CSCB20</h1>
         <ul class="links">
-          <li><a href="#">Home Page</a></li>
+          <li><a href="index.php">Home Page</a></li>
           <li><a href="announcements.php">Announcements</a></li>
           <li class="dropdown"><a href="#">Course Materials</a>
             <ul class="dropdown-content">
@@ -37,7 +37,7 @@
             <li><a href="grades.php">All Grades</a></li>
           </ul>
           </li>
-          <li><a href="CourseDownloads.php">Course Downloads</a></li>
+          <li><a href="#">Course Downloads</a></li>
           <li><a href = "logout.php">Sign Out</a></li>
         </ul>
       </div>';
@@ -45,7 +45,7 @@
       echo '<div class="header">
         <h1>CSCB20</h1>
         <ul class="links">
-          <li><a href="#">Home Page</a></li>
+          <li><a href="index.php">Home Page</a></li>
           <li><a href="announcements.php">Announcements</a></li>
           <li class="dropdown"><a href="#">Course Materials</a>
             <ul class="dropdown-content">
@@ -60,7 +60,7 @@
           </li>
           <li><a href="https://piazza.com/class/jcpjjp5l4bywd">Discussion Board</a></li>
           <li><a href="prof_grades.php">Student Grades</a></li>
-          <li><a href="CourseDownloads.php">Course Downloads</a></li>
+          <li><a href="#">Course Downloads</a></li>
           <li><a href = "logout.php">Sign Out</a></li>
         </ul>
       </div>';
@@ -68,7 +68,7 @@
       echo '<div class="header">
         <h1>CSCB20</h1>
         <ul class="links">
-          <li><a href="#">Home Page</a></li>
+          <li><a href="index.php">Home Page</a></li>
           <li><a href="announcements.php">Announcements</a></li>
           <li class="dropdown"><a href="#">Course Materials</a>
             <ul class="dropdown-content">
@@ -83,35 +83,32 @@
           </li>
           <li><a href="https://piazza.com/class/jcpjjp5l4bywd">Discussion Board</a></li>
           <li><a href="https://markus.utsc.utoronto.ca/cscb20w18/?locale=en">My Grades</a></li>
-          <li><a href="CourseDownloads.php">Course Downloads</a></li>
+          <li><a href="#">Course Downloads</a></li>
           <li><a href = "logout.php">Sign Out</a></li>
         </ul>
       </div>';
     }
 
    ?>
-
   <div class="main-sec">
     <div class="sub-sec">
-      <h1>CSCB20 &#8211; Introduction to Databases and Web Applications</h1>
-      <h5 style="color: grey; margin-left: 5%; margin-bottom: -8px;">Course Overview</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h1> Course Downloads </h1>
     </div>
     <div class="sub-sec">
-      <h3>Instructor Information</h3>
-      <ul>
-        <li>Instructor: A. Attarwala</li>
-        <li>Lecture: Mondays 9am - 11am in SW319</li>
-        <li>Email: abbas.attarwala@utoronto.ca</li>
-      </ul>
-    </div>
-    <div class="calender, sub-sec">
-      <h1>Course Calender</h1>
-      <hr>
-      <iframe src="https://calendar.google.com/calendar/embed?title=CSCB20&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=ztbarlow66%40gmail.com&amp;color=%2329527A&amp;ctz=Europe%2FLondon" style="border-width:0; margin-left:0.5%" width="99%" height="600px" frameborder="0" scrolling="no"></iframe>
+      <h1> MySQL and SequelPro </h1>
+      <ol>
+        <li style="padding-right:10px;"> Download MySQL Community edition on your computer from <a href="https://dev.mysql.com/downloads/mysql/">here</a> <br/><br/> During installation, a random password will be generated and presented to you as a dialog box. Make sure to save this!! You will use this later in SequelPro to connect to your database. <br/><br/></li>
+        <li>
+          <ol type="a">
+            <br/><li> Download SequelPro from <a href="https://www.sequelpro.com">here</a></li>
+            <br/><li> If you are on Windows or Mac or Linux (you can use this 30 day trial version) <a href="https://razorsql.com/download_win.html">here</a></li>
+          </ol>
+        <br/> From 2.a and 2.b you only require one of the other. You do not require both of them. If you want to use the command line or MySQLWorkBench these are also some other alternative.
+        <br/><br/> You require 1 and 2 for your first assignment.
+        </li>
+      </ol>
     </div>
   </div>
-
   <div class="footer">
     <div style="text-align:left; padding-left:10px;"><a href="http://www.utsc.utoronto.ca/cms/computer-science-1"><small>Faculty of Computer Science</small></a></div>
     <div style="text-align:left; padding-left:10px; padding-top:10px;"><small>Site Design by...</small></div>
