@@ -27,7 +27,7 @@
               <li><a href="Labs.php">Labs</a></li>
               <li><a href="ProblemSets.php">Problem Sets</a></li>
               <li><a href="#">Solutions</a></li>
-              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSevS2OIlHblbgb1Cd_3aBoLrRGqCLDhfKo5wRFh4Mj4Pq-rrA/viewform?usp=sf_link">Anonymous Feedback</a></li>
+              <li><a href="AnonFeedback.php">Anonymous Feedback</a></li>
             </ul>
           </li>
           <li><a href="https://piazza.com/class/jcpjjp5l4bywd">Discussion Board</a></li>
