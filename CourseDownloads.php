@@ -17,7 +17,7 @@
       echo '<div class="header">
         <h1>CSCB20</h1>
         <ul class="links">
-          <li><a href="index.php">Home Page</a></li>
+          <li><a href="#">Home Page</a></li>
           <li><a href="announcements.php">Announcements</a></li>
           <li class="dropdown"><a href="#">Course Materials</a>
             <ul class="dropdown-content">
@@ -37,7 +37,7 @@
             <li><a href="grades.php">All Grades</a></li>
           </ul>
           </li>
-          <li><a href="#">Course Downloads</a></li>
+          <li><a href="CourseDownloads.php">Course Downloads</a></li>
           <li><a href = "logout.php">Sign Out</a></li>
         </ul>
       </div>';

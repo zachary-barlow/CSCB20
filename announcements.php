@@ -17,8 +17,8 @@
       echo '<div class="header">
         <h1>CSCB20</h1>
         <ul class="links">
-          <li><a href="index.php">Home Page</a></li>
-          <li><a href="#">Announcements</a></li>
+          <li><a href="#">Home Page</a></li>
+          <li><a href="announcements.php">Announcements</a></li>
           <li class="dropdown"><a href="#">Course Materials</a>
             <ul class="dropdown-content">
               <li><a href="./pdfs/Syllabus.pdf">Syllabus</a></li>
