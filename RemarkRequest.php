@@ -4,14 +4,8 @@
    $assignment = mysqli_real_escape_string($db,$_POST['question_1']);
    $reason = mysqli_real_escape_string($db,$_POST['question_2']);
 
-   $sql_user = "SELECT id from users WHERE type='1'";
-   $s = mysqli_query($db,$sql_user);
-   $row1 = mysqli_fetch_array($s,MYSQLI_ASSOC);
-
-   $p_id = $row1['id'];
    // Insert the inputted data into the mysql
-   $sql_feedback = "INSERT INTO remarks (`id`, `assignment`,`reason`) VALUES ('$p_id','$assignment','$reason')";
-
+   $sql_feedback = "INSERT INTO remarks (`id`, `assignment`,`reason`) VALUES ('$user_id','$assignment','$reason')";
 
    if ($assignment == "" || $reason == ""){
       print "incomplete form";
