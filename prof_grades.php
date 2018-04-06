@@ -1,7 +1,7 @@
 <?php
   include("session.php");
   session_start();
- ?>
+?>
 
  <html>
  <head>
@@ -25,7 +25,12 @@
          </ul>
        </li>
        <li><a href="https://piazza.com/class/jcpjjp5l4bywd">Discussion Board</a></li>
-       <li><a href="#">Student Grades</a></li>
+       <li class="dropdown"><a href="#">Grades</a>
+       <ul class="dropdown-content">
+         <li><a href="#">Student Grades</a></li>
+         <li><a href="ViewRemarks.php">Re-Marks</a></li>
+       </ul>
+       </li>
        <li><a href="CourseDownloads.php">Course Downloads</a></li>
        <li><a href = "logout.php">Sign Out</a></li>
      </ul>
@@ -33,7 +38,7 @@
 
    <div class="main-sec">
      <div class="sub-sec">
-       <div>Name:<?php echo $login_session;?></div>
+       <div>Name: <?php echo $firstname;?></div>
      </div>
      <div class="sub-sec" id="grades">
       <!-- grades here -->

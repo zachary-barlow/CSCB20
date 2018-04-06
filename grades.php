@@ -70,6 +70,8 @@
         }
         echo '</ul><br>';
       ?>
+
+      <p><a href="RemarkRequest.php">Remark Request</a></p>
      </div>
    </div>
  </body>
