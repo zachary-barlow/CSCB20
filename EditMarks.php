@@ -86,7 +86,7 @@
    </div>
   <div class="main-sec">
     <div class="sub-sec">
-      <h1>Remark Request</h1>
+      <h1>Edit Marks</h1>
     </div>
     <div class="sub-sec">
       <form action="" method="post" style="padding: 10px;">
@@ -105,6 +105,10 @@
         <input type="submit" name="submit_form" id="submit_form">
       </form>
     </div>
+      <div class="footer">
+        <div style="text-align:left; padding-left:10px;"><a href="http://www.utsc.utoronto.ca/cms/computer-science-1"><small>Faculty of Computer Science</small></a></div>
+        <div style="text-align:left; padding-left:10px; padding-top:10px;"><small>Site Design by Zachary Barlow & Megan Kun</small></div>
+      </div>
   </div>
 </body>
 </html>
