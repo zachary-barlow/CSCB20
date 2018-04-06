@@ -63,25 +63,22 @@
           </ul>
           </li>';
     } else {
-              <li><a href="LectureSlides.php">Lecture Slides</a></li>
-              <li><a href="Assignments.php">Assignments</a></li>
-              <li><a href="Labs.php">Labs</a></li>
-              <li><a href="ProblemSets.php">Problem Sets</a></li>
-              <li><a href="Solutions.php">Solutions</a></li>
-              <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSevS2OIlHblbgb1Cd_3aBoLrRGqCLDhfKo5wRFh4Mj4Pq-rrA/viewform?usp=sf_link">Anonymous Feedback</a></li>
-            </ul>
+      echo '</ul>
           </li>
           <li><a href="https://piazza.com/class/jcpjjp5l4bywd">Discussion Board</a></li>
-          <li><a href="https://markus.utsc.utoronto.ca/cscb20w18/?locale=en">My Grades</a></li>
-          <li><a href="CourseDownloads.php">Course Downloads</a></li>
-          <li><a href = "logout.php">Sign Out</a></li>
-        </ul>
-      </div>';
+          <li class="dropdown"><a href="#">Grades</a>
           <ul class="dropdown-content">
             <li><a href="ta_marks.php">All Grades</a></li>
+            <li><a href="ViewRemarks.php">Re-Marks</a></li>
+            <li><a href="EditMarks.php">Edit Marks</a></li>
+          </ul>
+          </li>';
     }
-
    ?>
+   <li><a href="CourseDownloads.php">Course Downloads</a></li>
+   <li><a href = "logout.php">Sign Out</a></li>
+   </ul>
+   </div>
   <div class="main-sec">
     <div class="sub-sec"><h1>Announcements</h1></div>
     <div class="announcement, sub-sec">
