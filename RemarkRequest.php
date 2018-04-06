@@ -4,11 +4,16 @@
    $assignment = mysqli_real_escape_string($db,$_POST['question_1']);
    $reason = mysqli_real_escape_string($db,$_POST['question_2']);
 
+   if ($row2['type'] == 0) {
+   } else {
+     die ("Not permitted <a href='index.php' style='color:blue'> Go to homepage </a>");
+   }
+
    // Insert the inputted data into the mysql
    $sql_feedback = "INSERT INTO remarks (`id`, `assignment`,`reason`) VALUES ('$user_id','$assignment','$reason')";
 
    if ($assignment == "" || $reason == ""){
-      print "incomplete form";
+      echo "incomplete form";
    } else {
       mysqli_query($db,$sql_feedback);
       echo "submitted";
@@ -21,33 +26,43 @@
   <link type="text/css" href="AnonFeedback.css" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-    <h1>CSCB20</h1>
-    <ul class="links">
-      <li><a href="index.php">Home Page</a></li>
-      <li><a href="announcements.php">Announcements</a></li>
-      <li class="dropdown"><a href="#">Course Materials</a>
-        <ul class="dropdown-content">
-          <li><a href="./pdfs/Syllabus.pdf">Syllabus</a></li>
-          <li><a href="LectureSlides.php">Lecture Slides</a></li>
-          <li><a href="Assignments.php">Assignments</a></li>
-          <li><a href="Labs.php">Labs</a></li>
-          <li><a href="ProblemSets.php">Problem Sets</a></li>
-          <li><a href="Solutions.php">Solutions</a></li>
-          <li><a href="#">Anonymous Feedback</a></li>
-        </ul>
-      </li>
-      <li><a href="https://piazza.com/class/jcpjjp5l4bywd">Discussion Board</a></li>
-      <li class="dropdown"><a href="grades.php">Grades</a>
-      <ul class="dropdown-content">
-        <li><a href="https://markus.utsc.utoronto.ca/cscb20w18/?locale=en">Markus</a></li>
-        <li><a href="grades.php">All Grades</a></li>
-      </ul>
-      </li>
-      <li><a href="CourseDownloads.php">Course Downloads</a></li>
-      <li><a href = "logout.php">Sign Out</a></li>
-    </ul>
-  </div>
+ <?php
+   $sql2 = "SELECT * FROM users WHERE username='$login_session'";
+   $cr = mysqli_query($db,$sql2);
+   $row2 = mysqli_fetch_array($cr,MYSQLI_ASSOC);
+
+   if ($row2['type'] == 0) {
+     echo '<div class="header">
+       <h1>CSCB20</h1>
+       <ul class="links">
+         <li><a href="index.php">Home Page</a></li>
+         <li><a href="announcements.php">Announcements</a></li>
+         <li class="dropdown"><a href="#">Course Materials</a>
+           <ul class="dropdown-content">
+             <li><a href="./pdfs/Syllabus.pdf">Syllabus</a></li>
+             <li><a href="LectureSlides.php">Lecture Slides</a></li>
+             <li><a href="Assignments.php">Assignments</a></li>
+             <li><a href="Labs.php">Labs</a></li>
+             <li><a href="ProblemSets.php">Problem Sets</a></li>
+             <li><a href="Solutions.php">Solutions</a></li>
+             <li><a href="AnonFeedback.php">Anonymous Feedback</a></li>
+           </ul>
+         </li>
+         <li><a href="https://piazza.com/class/jcpjjp5l4bywd">Discussion Board</a></li>
+         <li class="dropdown"><a href="grades.php">Grades</a>
+         <ul class="dropdown-content">
+           <li><a href="https://markus.utsc.utoronto.ca/cscb20w18/?locale=en">Markus</a></li>
+           <li><a href="grades.php">All Grades</a></li>
+         </ul>
+         </li>
+         <li><a href="CourseDownloads.php">Course Downloads</a></li>
+         <li><a href = "logout.php">Sign Out</a></li>
+       </ul>
+     </div>';
+   } else {
+     die ("Not permitted <a href='index.php' style='color:blue'> Go to homepage </a>");
+   }
+ ?>
   <div class="main-sec">
     <div class="sub-sec">
       <h1>Remark Request</h1>
