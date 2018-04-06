@@ -56,14 +56,23 @@
   </div>
   <div class="main-sec">
     <div class="sub-sec">
-      <form action="" method="post">
-        <label>What do you like about the instructor teaching?  :</label><br><textarea id="question_1" name="question_1"></textarea><br>
-        <label>What do you recommend the instructor to do to improve their teaching?  </label><br><textarea id="question_2" name="question_2"></textarea><br>
-        <label>What do you like about the labs? </label><br><textarea id="question_3" name="question_3"></textarea><br>
-        <label>What do you recommend the lab instructors to do to improve their lab teaching?</label><br><textarea id="question_4" name="question_4"></textarea><br>
-        <input type="submit" name="submit_form" id="submit_form" >
-      </form>
+      <h1> Anonymous Feedback </h1>
     </div>
+    <div class="sub-sec">
+      <div class="contain_stuff">
+        <form action="" method="post">
+          <label>What do you like about the instructor teaching?  :</label><br><textarea name="question_1"></textarea><br><br>
+          <label>What do you recommend the instructor to do to improve their teaching?  </label><br><textarea  name="question_2"></textarea><br><br>
+          <label>What do you like about the labs? </label><br><textarea  name="question_3"></textarea><br><br>
+          <label>What do you recommend the lab instructors to do to improve their lab teaching?</label><br><textarea name="question_4"></textarea><br><br>
+          <input type="submit" name="submit_form" id="submit_form" >
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div style="text-align:left; padding-left:10px;"><a href="http://www.utsc.utoronto.ca/cms/computer-science-1"><small>Faculty of Computer Science</small></a></div>
+    <div style="text-align:left; padding-left:10px; padding-top:10px;"><small>Site Design by...</small></div>
   </div>
 </body>
 </html>
