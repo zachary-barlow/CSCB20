@@ -103,7 +103,7 @@
                   <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
                   <input id="submit" type = "submit" value = " Submit "/><br />
                </form>
-
+               <a href="CreateAccount.php">Create New Account</a>
                <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 
             </div>
