@@ -1,7 +1,7 @@
 <?php
    include('session.php');
    session_start();
-   $assignment = mysqli_real_escape_string($db,$_POST['question_1']);
+   $assignment = mysqli_real_escape_string($db,$_POST['assignment']);
    $reason = mysqli_real_escape_string($db,$_POST['question_2']);
 
    if ($row2['type'] == 0) {
@@ -69,7 +69,16 @@
     </div>
     <div class="sub-sec">
       <form action="" method="post" style="padding: 10px;">
-        <label>Which project do you want to have remarked?</label><br><textarea id="question_1" name="question_1" ></textarea><br>
+        <label>Which project do you want to have remarked?</label><br>
+        <input type="radio" name="assignment" value="a1">A1
+        <input type="radio" name="assignment" value="a2">A2
+        <input type="radio" name="assignment" value="a3">A3
+        <input type="radio" name="assignment" value="a4">A4
+        <input type="radio" name="assignment" value="q1">Q1
+        <input type="radio" name="assignment" value="q2">Q2
+        <input type="radio" name="assignment" value="midterm">Midterm
+        <input type="radio" name="assignment" value="final">final
+        <br>
         <label>Why do you want to be remarked?</label><br><textarea id="question_2" name="question_2" ></textarea><br>
         <input type="submit" name="submit_form" id="submit_form">
       </form>
