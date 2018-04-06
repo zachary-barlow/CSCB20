@@ -8,26 +8,26 @@
   <link type="text/css" href="Labs.css" rel="stylesheet">
 </head>
 <body>
-  <div class="header">
-  <h1>CSCB20</h1>
-  <ul class="links">
-    <li><a href="index.php">Home Page</a></li>
-    <li><a href="announcements.php">Announcements</a></li>
-    <li class="dropdown"><a href="#">Course Materials</a>
-        <ul class="dropdown-content">
-          <li><a href="./pdfs/Syllabus.pdf">Syllabus</a></li>
-          <li><a href="LectureSlides.php">Lecture Slides</a></li>
-          <li><a href="Assignments.php">Assignments</a></li>
-          <li><a href="Labs.php">Labs</a></li>
-          <li><a href="ProblemSets.php">Problem Sets</a></li>
-          <li><a href="Solutions.php">Solutions</a></li>
   <?php
     $sql2 = "SELECT type FROM users WHERE username='$login_session'";
     $cr = mysqli_query($db,$sql2);
     $row2 = mysqli_fetch_array($cr,MYSQLI_ASSOC);
 
     if($row2['type'] == 0){
-      echo '<li><a href="AnonFeedback.php">Anonymous Feedback</a></li>
+      echo '<div class="header">
+        <h1>CSCB20</h1>
+        <ul class="links">
+          <li><a href="index.php">Home Page</a></li>
+          <li><a href="announcements.php">Announcements</a></li>
+          <li class="dropdown"><a href="#">Course Materials</a>
+              <ul class="dropdown-content">
+                <li><a href="./pdfs/Syllabus.pdf">Syllabus</a></li>
+                <li><a href="LectureSlides.php">Lecture Slides</a></li>
+                <li><a href="Assignments.php">Assignments</a></li>
+                <li><a href="Labs.php">Labs</a></li>
+                <li><a href="ProblemSets.php">Problem Sets</a></li>
+                <li><a href="Solutions.php">Solutions</a></li>
+                <li><a href="AnonFeedback.php">Anonymous Feedback</a></li>
             </ul>
           </li>
           <li><a href="https://piazza.com/class/jcpjjp5l4bywd">Discussion Board</a></li>
@@ -38,7 +38,20 @@
           </ul>
           </li>';
     } elseif ($row2['type'] == 1) {
-      echo '<li><a href="ViewFeedback.php">Anonymous Feedback</a></li>
+      echo '<div class="header">
+        <h1>CSCB20</h1>
+        <ul class="links">
+          <li><a href="index.php">Home Page</a></li>
+          <li><a href="announcements.php">Announcements</a></li>
+          <li class="dropdown"><a href="#">Course Materials</a>
+              <ul class="dropdown-content">
+                <li><a href="./pdfs/Syllabus.pdf">Syllabus</a></li>
+                <li><a href="LectureSlides.php">Lecture Slides</a></li>
+                <li><a href="Assignments.php">Assignments</a></li>
+                <li><a href="Labs.php">Labs</a></li>
+                <li><a href="ProblemSets.php">Problem Sets</a></li>
+                <li><a href="Solutions.php">Solutions</a></li>
+                <li><a href="ViewFeedback.php">Anonymous Feedback</a></li>
             </ul>
           </li>
           <li><a href="https://piazza.com/class/jcpjjp5l4bywd">Discussion Board</a></li>
@@ -63,7 +76,6 @@
               <li><a href="#">Labs</a></li>
               <li><a href="ProblemSets.php">Problem Sets</a></li>
               <li><a href="Solutions.php">Solutions</a></li>
-              <li><a href="prof_anon.php">Anonymous Feedback</a></li>
             </ul>
           </li>
           <li><a href="https://piazza.com/class/jcpjjp5l4bywd">Discussion Board</a></li>

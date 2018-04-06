@@ -29,6 +29,7 @@
        <ul class="dropdown-content">
          <li><a href="#">Student Grades</a></li>
          <li><a href="ViewRemarks.php">Re-Marks</a></li>
+         <li><a href="EditMarks.php">Edit Marks</a></li>
        </ul>
        </li>
        <li><a href="CourseDownloads.php">Course Downloads</a></li>
