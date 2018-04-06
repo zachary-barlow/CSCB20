@@ -41,19 +41,30 @@
        <div>Name: <?php echo $firstname;?></div>
      </div>
      <div class="sub-sec" id="grades">
+       <h1>Student Grades</h1>
       <!-- grades here -->
       <?php
+        $sql_cols = "SHOW COLUMNS FROM grades";
+        $res = mysqli_query($db,$sql_cols);
+
         $gq = "SELECT * from grades";
         $gr = mysqli_query($db, $gq);
         //$count = mysqli_num_rows($gq);
         // print all items in table
+        echo '<div style="display:table; width:auto;background-color:#3E464A; border:1px solid white;border-spacing:5px; color: white; margin-left:8%; margin-top: 2%;">';
         while($r = mysqli_fetch_array($gr,MYSQLI_ASSOC)){
-            echo '<ul>';
-            foreach ($r as $key ) {
-              echo '<li style="display: inline; padding: 5px;">' .$key . '</li>';
+            echo '<div style="display:table-row;width:auto;">';
+            while($row = mysqli_fetch_array($res)){
+                echo '<div style="display: table-column; float:left; width: 100px;">' . $row['Field']."</div>";
             }
-            echo '</ul><br>';
+            echo "</div>";
+            echo '<div style="display:table-row;width:auto;">';
+            foreach ($r as $key ) {
+              echo '<div style="display: table-column; float:left; width: 100px; background-color: #62A6CB; color: black">' . $key . '</div>';
+            }
+            echo '</div><br>';
         }
+        echo "</div>";
       ?>
      </div>
    </div>

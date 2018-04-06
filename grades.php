@@ -41,6 +41,7 @@
        <div>Name:<?php echo $login_session;?></div>
      </div>
      <div class="sub-sec">
+       <h1>Your Marks</h1>
       <!-- grades here -->
       <?php
         //$cq = "SELECT column_name FROM information_schema.columns WHERE table_name='grades'";
@@ -51,12 +52,14 @@
         while($row = mysqli_fetch_array($result)){
             echo '<p>' . $row["Field"] . '</p>';
         }*/
-        /*$sql = "SHOW COLUMNS FROM grades";
+        $sql = "SHOW COLUMNS FROM grades";
         $result = mysqli_query($db,$sql);
+        echo '<div style="display:table; width:auto;background-color:#3E464A; border:1px solid white;border-spacing:5px; color: white; margin-left:10%; margin-top: 5%;">';
+        echo '<div style="display:table-row;width:auto;">';
         while($row = mysqli_fetch_array($result)){
-            echo '<p>' . $row['Field'].":</p>";
-        }*/
-
+            echo '<div style="display: table-column; float:left; width: 100px;">' . $row['Field']."</div>";
+        }
+        echo "</div>";
         $sql_id = "SELECT id FROM users WHERE username = '$login_session' ";
         $id_result = mysqli_query($db,$sql_id);
         $id = mysqli_fetch_array($id_result,MYSQLI_ASSOC);
@@ -64,11 +67,11 @@
         $sql_marks = "SELECT * FROM grades WHERE grades.id = $id[id]";
         $marks = mysqli_query($db,$sql_marks);
         $marks_row = mysqli_fetch_array($marks,MYSQLI_ASSOC);
-        echo '<ul>';
+        echo '<div style="display:table-row;width:auto;">';
         foreach ($marks_row as $key ) {
-          echo '<li style="display: inline; padding: 5px;">' . $key . '</li>';
+          echo '<div style="display: table-column; float:left; width: 100px; background-color: #62A6CB">' . $key . '</div>';
         }
-        echo '</ul><br>';
+        echo '</div></div><br>';
       ?>
 
       <p><a href="RemarkRequest.php">Remark Request</a></p>

@@ -41,13 +41,26 @@
       $sql = "SELECT * from feedback";
       $item = mysqli_query($db,$sql);
 
+
+
+
       while($row = mysqli_fetch_array($item,MYSQLI_ASSOC)){
-          echo '<div class="sub-sec"><ul>';
-          echo '<li style="display: inline; padding: 5px;">' .$row['q1'] . '</li>';
-          echo '<li style="display: inline; padding: 5px;">' .$row['q2'] . '</li>';
-          echo '<li style="display: inline; padding: 5px;">' .$row['q3'] . '</li>';
-          echo '<li style="display: inline; padding: 5px;">' .$row['q4'] . '</li>';
-          echo '</ul></div>';
+          $sql_col = "SHOW COLUMNS FROM feedback";
+          $res = mysqli_query($db,$sql_col);
+          echo '<div class="sub-sec">';
+          echo '<div style="display:table; width:auto;background-color:#3E464A; border:1px solid white;border-spacing:5px; color: white; margin-left:10%">';
+          echo '<div style="display:table-row;width:auto;"> ';
+          while($rows = mysqli_fetch_array($res,MYSQLI_ASSOC)){
+            if($rows['Field'] == 'id' || $rows['Field'] == 'usertype'){
+            } else {
+              echo '<div style="display: table-column; float:left; width: 200px;">' . $rows['Field']."</div>";
+            }
+          }
+          echo '<br><div style="display: table-column; float:left; width: 200px; background-color: #62A6CB">' .$row['q1'] . '</div>';
+          echo '<div style="display: table-column; float:left; width: 200px; background-color: #62A6CB">' .$row['q2'] . '</div>';
+          echo '<div style="display: table-column; float:left; width: 200px; background-color: #62A6CB">' .$row['q3'] . '</div>';
+          echo '<div style="display: table-column; float:left; width: 200px; background-color: #62A6CB">' .$row['q4'] . '</div>';
+          echo '</div></div></div>';
       }
      ?>
   </div>
