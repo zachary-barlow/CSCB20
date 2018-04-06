@@ -49,7 +49,7 @@
 
    <div class="main-sec">
      <div class="sub-sec">
-       <div>Name: <?php echo $firstname;?></div>
+         <h5 style="color: grey;margin-left: 15px;">Name: <?php echo $firstname;?></h5>
      </div>
      <div class="sub-sec" id="grades">
       <!-- grades here -->
@@ -67,6 +67,10 @@
         }
       ?>
      </div>
+       <div class="footer">
+         <div style="text-align:left; padding-left:10px;"><a href="http://www.utsc.utoronto.ca/cms/computer-science-1"><small>Faculty of Computer Science</small></a></div>
+         <div style="text-align:left; padding-left:10px; padding-top:10px;"><small>Site Design by Zachary Barlow & Megan Kun</small></div>
+       </div>
    </div>
  </body>
  </html>
