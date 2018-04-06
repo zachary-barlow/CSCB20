@@ -38,10 +38,10 @@
 
    <div class="main-sec">
      <div class="sub-sec">
-       <div>Name:<?php echo $login_session;?></div>
+       <h1>Your Marks</h1>
      </div>
      <div class="sub-sec">
-       <h1>Your Marks</h1>
+
       <!-- grades here -->
       <?php
         //$cq = "SELECT column_name FROM information_schema.columns WHERE table_name='grades'";
@@ -69,7 +69,7 @@
         $marks_row = mysqli_fetch_array($marks,MYSQLI_ASSOC);
         echo '<div style="display:table-row;width:auto;">';
         foreach ($marks_row as $key ) {
-          echo '<div style="display: table-column; float:left; width: 100px; background-color: #62A6CB">' . $key . '</div>';
+          echo '<div style="display: table-column; float:left; width: 100px; background-color: #62A6CB;padding:2px;">' . $key . '</div>';
         }
         echo '</div></div><br>';
       ?>

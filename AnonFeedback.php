@@ -14,7 +14,6 @@
      // Insert the inputted data into the mysql
      $sql_feedback = "INSERT INTO feedback (`id`, `usertype`,`q1`,`q2`,`q3`,`q4`) VALUES ('$p_id','1','$q1','$q2','$q3','$q4')";
      $insert = mysqli_query($db,$sql_feedback);
-     echo $sql_feedback;
      if(!$insert) {
        die("DAMMIT");
      } else {

@@ -39,10 +39,11 @@
 
    <div class="main-sec">
      <div class="sub-sec">
-       <div>Name: <?php echo $firstname;?></div>
+       <h1>Student Marks</h1>
      </div>
+
      <div class="sub-sec" id="grades">
-       <h1>Student Grades</h1>
+
       <!-- grades here -->
       <?php
         $sql_cols = "SHOW COLUMNS FROM grades";
@@ -61,9 +62,9 @@
             echo "</div>";
             echo '<div style="display:table-row;width:auto;">';
             foreach ($r as $key ) {
-              echo '<div style="display: table-column; float:left; width: 100px; background-color: #62A6CB; color: black">' . $key . '</div>';
+              echo '<div style="display: table-column; float:left; width: 100px; background-color: #62A6CB; color: black;padding:2px;">' . $key . '</div>';
             }
-            echo '</div><br>';
+            echo '</div>';
         }
         echo "</div>";
       ?>
