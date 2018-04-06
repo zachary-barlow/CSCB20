@@ -1,7 +1,7 @@
 <?php
    include('session.php');
    session_start();
-   
+
 ?>
 <html>
 <head>
@@ -34,6 +34,22 @@
     <div class="sub-sec">
       <h1> Anonymous Feedback </h1>
     </div>
+    <?php
+      $id_sql = "SELECT id from users where username='$login_session'";
+      $id_query = mysqli_query($db,$id_sql);
+      $id = mysqli_fetch_array($id_query,MYSQLI_ASSOC);
+      $sql = "SELECT * from feedback";
+      $item = mysqli_query($db,$sql);
+
+      while($row = mysqli_fetch_array($item,MYSQLI_ASSOC)){
+          echo '<div class="sub-sec"><ul>';
+          echo '<li style="display: inline; padding: 5px;">' .$row['q1'] . '</li>';
+          echo '<li style="display: inline; padding: 5px;">' .$row['q2'] . '</li>';
+          echo '<li style="display: inline; padding: 5px;">' .$row['q3'] . '</li>';
+          echo '<li style="display: inline; padding: 5px;">' .$row['q4'] . '</li>';
+          echo '</ul></div>';
+      }
+     ?>
   </div>
   <div class="footer">
     <div style="text-align:left; padding-left:10px;"><a href="http://www.utsc.utoronto.ca/cms/computer-science-1"><small>Faculty of Computer Science</small></a></div>

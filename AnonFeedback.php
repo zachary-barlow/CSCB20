@@ -1,24 +1,30 @@
 <?php
-   include('session.php');
+   include('config.php');
    session_start();
-   $q1 = mysqli_real_escape_string($db,$_POST['question_1']);
-   $q2 = mysqli_real_escape_string($db,$_POST['question_2']);
-   $q3 = mysqli_real_escape_string($db,$_POST['question_3']);
-   $q4 = mysqli_real_escape_string($db,$_POST['question_4']);
+   if(isset($_POST['submit_form'])){
+     $q1 = mysqli_real_escape_string($db,$_POST['question_1']);
+     $q2 = mysqli_real_escape_string($db,$_POST['question_2']);
+     $q3 = mysqli_real_escape_string($db,$_POST['question_3']);
+     $q4 = mysqli_real_escape_string($db,$_POST['question_4']);
 
-   $sql_user = "SELECT id from users WHERE type='1'";
-   $s = mysqli_query($db,$sql_user);
-   $row1 = mysqli_fetch_array($s,MYSQLI_ASSOC);
-
-   $p_id = $row1['id'];
-   // Insert the inputted data into the mysql
-   $sql_feedback = "INSERT INTO feedback (`id`, `type`,`q1`,`q2`,`q3`,`q4`) VALUES ('$p_id','1','$q1','$q2','$q3','$q4')";
-
-   if(!mysqli_query($db,$sql_feedback)) {
-     echo "not inserted";
-   } else {
-     header("refresh:2; url=AnonFeedback.php");
+     $sql_user = "SELECT id from users WHERE type='1'";
+     $s = mysqli_query($db,$sql_user);
+     $row1 = mysqli_fetch_array($s,MYSQLI_ASSOC);
+     $p_id = $row1['id'];
+     // Insert the inputted data into the mysql
+     $sql_feedback = "INSERT INTO feedback (`id`, `type`,`q1`,`q2`,`q3`,`q4`) VALUES ('$p_id','1','$q1','$q2','$q3','$q4')";
+     $insert = mysqli_query($db,$sql_feedback);
+     echo $sql_feedback;
+     if(!$insert) {
+       die("DAMMIT");
+     } else {
+       header("refresh:2; url=AnonFeedback.php");
+     }
+     echo '<div class="sub-sec"><pre>';
+     print_r($_POST);
+     echo '</pre></div>';
    }
+
 
 ?>
 <html>
@@ -27,7 +33,7 @@
   <link type="text/css" href="AnonFeedback.css" rel="stylesheet">
 </head>
 <body>
-      <div class="header">
+      <!--<div class="header">
         <h1>CSCB20</h1>
         <ul class="links">
           <li><a href="#">Home Page</a></li>
@@ -54,7 +60,7 @@
           <li><a href = "logout.php">Sign Out</a></li>
         </ul>
       </div>
-  </div>
+  </div>-->
   <div class="main-sec">
     <div class="sub-sec">
       <h1> Anonymous Feedback </h1>
