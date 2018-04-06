@@ -49,7 +49,7 @@
 
    <div class="main-sec">
      <div class="sub-sec">
-       <div>Name: <?php echo $firstname;?></div>
+         <h5 style="color: grey;margin-left: 15px;">Name: <?php echo $firstname;?></h5>
      </div>
      <div class="sub-sec" id="grades">
       <!-- grades here -->
