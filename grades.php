@@ -38,7 +38,7 @@
 
    <div class="main-sec">
      <div class="sub-sec">
-       <div>Name:<?php echo $login_session;?></div>
+         <h5 style="color: grey;margin-left: 15px;">Name: <?php echo $firstname;?></h5>
      </div>
      <div class="sub-sec">
        <h1>Your Marks</h1>
