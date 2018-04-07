@@ -1,18 +1,14 @@
 <?php
-   include('config.php');
+   include('session.php');
    session_start();
    if(isset($_POST['submit_form'])){
      $q1 = mysqli_real_escape_string($db,$_POST['question_1']);
      $q2 = mysqli_real_escape_string($db,$_POST['question_2']);
      $q3 = mysqli_real_escape_string($db,$_POST['question_3']);
      $q4 = mysqli_real_escape_string($db,$_POST['question_4']);
-
-     $sql_user = "SELECT id from users WHERE type='1'";
-     $s = mysqli_query($db,$sql_user);
-     $row1 = mysqli_fetch_array($s,MYSQLI_ASSOC);
-     $p_id = $row1['id'];
+     $prof_insert = mysqli_real_escape_string($db,$_POST['prof']);
      // Insert the inputted data into the mysql
-     $sql_feedback = "INSERT INTO feedback (`id`, `usertype`,`q1`,`q2`,`q3`,`q4`) VALUES ('$p_id','1','$q1','$q2','$q3','$q4')";
+     $sql_feedback = "INSERT INTO feedback (`id`, `usertype`,`q1`,`q2`,`q3`,`q4`) VALUES ('$prof_insert','1','$q1','$q2','$q3','$q4')";
      $insert = mysqli_query($db,$sql_feedback);
      if(!$insert) {
        die("DAMMIT");
@@ -64,6 +60,18 @@
     <div class="sub-sec">
       <div class="contain_stuff">
         <form action="" method="post">
+          <?php
+            $type = 1;
+            $profs_sql = "SELECT id FROM users WHERE type='$type'";
+            $prof = mysqli_query($db, $profs_sql);
+            while($row_prof = mysqli_fetch_array($prof,MYSQLI_ASSOC)){
+              $name_prof = "SELECT firstname, lastname FROM users WHERE id='$row_prof[id]'";
+              $prof_name = mysqli_query($db, $name_prof);
+              $row_name = mysqli_fetch_array($prof_name,MYSQLI_ASSOC);
+              echo "<label>$row_name[firstname] $row_name[lastname]:</label><input type='radio' name='prof' value='$row_prof[id]'>";
+          }
+           ?>
+           <br><br>
           <label>What do you like about the instructor teaching?  :</label><br><textarea name="question_1"></textarea><br><br>
           <label>What do you recommend the instructor to do to improve their teaching?  </label><br><textarea  name="question_2"></textarea><br><br>
           <label>What do you like about the labs? </label><br><textarea  name="question_3"></textarea><br><br>

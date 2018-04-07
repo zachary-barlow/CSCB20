@@ -44,7 +44,7 @@
       $id_sql = "SELECT id from users where username='$login_session'";
       $id_query = mysqli_query($db,$id_sql);
       $id = mysqli_fetch_array($id_query,MYSQLI_ASSOC);
-      $sql = "SELECT * from feedback";
+      $sql = "SELECT * from feedback WHERE id='$id' ";
       $item = mysqli_query($db,$sql);
 
       while($row = mysqli_fetch_array($item,MYSQLI_ASSOC)){
