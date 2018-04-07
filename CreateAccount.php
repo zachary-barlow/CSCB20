@@ -46,7 +46,7 @@
         Last name:<input type="text" name="lastname"><br>
         ID:<input type="number" name="given_id"><br>
         username:<input type="text" name="username"><br>
-        password: <input type="text" name="password"><br>
+        password: <input type="password" name="password"><br>
 
         <input type="radio" name="user_type" value=0>Student
         <input type="radio" name="user_type" value=2>TA
